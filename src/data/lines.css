@@ -1,0 +1,383 @@
+/* LINE SHAPE STYLES */
+
+.css-point {
+  width: 15px;
+  height: 15px;
+  background-color: #1e90ff;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.css-line {
+  width: 100px;
+  height: 4px;
+  background-color: #1e90ff;
+  margin: 0 auto;
+  position: relative;
+}
+
+.css-line::before,
+.css-line::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.css-line::before {
+  left: -10px;
+  border-width: 4px 6px 4px 0;
+  border-color: transparent #1e90ff transparent transparent;
+}
+
+.css-line::after {
+  right: -10px;
+  border-width: 4px 0 4px 6px;
+  border-color: transparent transparent transparent #1e90ff;
+}
+
+.css-segment {
+  width: 80px;
+  height: 3px;
+  background-color: #1e90ff;
+  margin: 0 auto;
+  position: relative;
+}
+
+.css-segment::before,
+.css-segment::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #1e90ff;
+  border-radius: 50%;
+  top: -3.5px;
+}
+
+.css-segment::before {
+  left: -10px;
+}
+
+.css-segment::after {
+  right: -10px;
+}
+
+.css-ray {
+  width: 80px;
+  height: 3px;
+  background-color: #1e90ff;
+  margin: 0 auto;
+  position: relative;
+}
+
+.css-ray::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -3.5px;
+  width: 10px;
+  height: 10px;
+  background-color: #1e90ff;
+  border-radius: 50%;
+}
+
+.css-ray::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -4px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 6px;
+  border-color: transparent transparent transparent #1e90ff;
+}
+
+.css-parallel {
+  width: 100px;
+  height: 30px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.css-parallel::before,
+.css-parallel::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: #1e90ff;
+  left: 0;
+}
+
+.css-parallel::before {
+  top: 5px;
+}
+
+.css-parallel::after {
+  bottom: 5px;
+}
+
+.css-perpendicular {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.css-perpendicular::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: #1e90ff;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.css-perpendicular::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 80px;
+  background-color: #1e90ff;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.css-curved {
+  width: 80px;
+  height: 50px;
+  border: 3px solid #1e90ff;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 80px 0 0 0;
+  margin: 0 auto;
+}
+
+.css-zigzag {
+  width: 80px;
+  height: 50px;
+  background: linear-gradient(45deg, #1e90ff 0%, #1e90ff 5px, transparent 5px, transparent 10px),
+              linear-gradient(-45deg, #1e90ff 0%, #1e90ff 5px, transparent 5px, transparent 10px);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+  background-repeat: repeat;
+  margin: 0 auto;
+}
+
+.css-spiral {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #1e90ff;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.css-spiral::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #1e90ff;
+  border-radius: 50%;
+  top: 8px;
+  left: 8px;
+}
+
+.css-spiral::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #1e90ff;
+  border-radius: 50%;
+  top: 18px;
+  left: 18px;
+}
+
+.css-wavy {
+  width: 100px;
+  height: 30px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.css-wavy::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20px 50%, #1e90ff 2px, transparent 2px),
+    radial-gradient(circle at 40px 50%, #1e90ff 2px, transparent 2px),
+    radial-gradient(circle at 60px 50%, #1e90ff 2px, transparent 2px),
+    radial-gradient(circle at 80px 50%, #1e90ff 2px, transparent 2px);
+  background-size: 100px 10px;
+  background-repeat: repeat;
+}
+
+.css-broken {
+  width: 100px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(90deg, #1e90ff 0%, #1e90ff 15px, transparent 15px, transparent 30px, #1e90ff 30px, #1e90ff 45px, transparent 45px, transparent 60px, #1e90ff 60px, #1e90ff 75px, transparent 75px, transparent 90px, #1e90ff 90px, #1e90ff 100%);
+  background-size: 100% 3px;
+  background-position: 0 20px;
+  background-repeat: no-repeat;
+}
+
+.css-arc {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #1e90ff;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 80px;
+  margin: 0 auto;
+}
+
+.css-chord {
+  width: 70px;
+  height: 60px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.css-chord::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 60px;
+  border: 3px solid #1e90ff;
+  border-radius: 50%;
+  bottom: 0;
+}
+
+.css-chord::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #1e90ff;
+  top: 30px;
+  left: 5px;
+}
+
+.css-tangent {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.css-tangent::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #1e90ff;
+  border-radius: 50%;
+  bottom: 0;
+  left: 10px;
+}
+
+.css-tangent::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: #ff6ec7;
+  bottom: -5px;
+  left: 0;
+}
+
+.css-secant {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.css-secant::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #1e90ff;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+
+.css-secant::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: #ff6ec7;
+  top: 35px;
+  left: -10px;
+  transform: rotate(20deg);
+}
+
+.css-bisector {
+  width: 3px;
+  height: 80px;
+  background-color: #ff6ec7;
+  margin: 0 auto;
+  transform: rotate(30deg);
+}
+
+.css-polyline {
+  width: 80px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  background: 
+    linear-gradient(135deg, #1e90ff 0%, #1e90ff 3px, transparent 3px),
+    linear-gradient(45deg, #1e90ff 0%, #1e90ff 3px, transparent 3px),
+    linear-gradient(135deg, #1e90ff 0%, #1e90ff 3px, transparent 3px);
+  background-size: 40px 25px;
+  background-position: 0 0, 20px 25px, 40px 0;
+  background-repeat: no-repeat;
+}
+
+.css-helix {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #1e90ff;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.css-helix::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #1e90ff;
+  border-radius: 50%;
+  top: 8px;
+  left: 8px;
+}
+
+.css-helix::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #1e90ff;
+  border-radius: 50%;
+  top: 18px;
+  left: 18px;
+}
